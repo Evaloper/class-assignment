@@ -1,8 +1,10 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class TaskOne {
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
+        Random random = new Random();
         System.out.println("Enter your full name: ");
         String fullName = reader.nextLine();
 
@@ -15,15 +17,15 @@ public class TaskOne {
         letPlay = reader.nextLine();
 
        while (letPlay.equalsIgnoreCase("yes")){
-           int num1 = 100;
-           int num2 = 20;
+           int num1 = random.nextInt(1, 100) ;
+           int num2 = random.nextInt( 1, 20);
 
            int result = 0;
 
 
 //        int sum = num1 + num2;
 
-           System.out.println("What is the addiction of 100 and 20: ");
+           System.out.println("What is the addiction of " + num1 + "+" + num2);
            int yourSum = reader.nextInt();
 
            int correctSum = num1 + num2;
@@ -35,7 +37,7 @@ public class TaskOne {
                System.out.println(yourSum + " is the wrong answer. " + "The correct answer is " + " " + correctSum);
            }
 
-           System.out.println("What is the subtraction of 100 from 20: ");
+           System.out.println("What is the subtraction of "  + num1 + "-" + num2);
            int yourSubtract = reader.nextInt();
 
            int correctSubtract = num1 - num2;
@@ -47,7 +49,7 @@ public class TaskOne {
            }
 
 
-           System.out.println("What is the multiplication of 100 and 20: ");
+           System.out.println("What is the multiplication of " + num1 + "*" + num2);
            int yourMultiply = reader.nextInt();
 
            int correctMultiply = num1 * num2;
@@ -59,7 +61,7 @@ public class TaskOne {
            }
 
 
-           System.out.println("What is the division of 100 by 20: ");
+           System.out.println("What is the division of "  + num1 + "/" + num2);
            int yourDivision = reader.nextInt();
 
            int correctDivision = num1 / num2;
